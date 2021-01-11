@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(void) {
+    int n = 5;
+    int a;
+    int b;
+    const int m = 2*n-1;
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < m; ++j) {
+            a = (i >= n) ? m - i - 1: i;
+            b = (j >= n) ? m - j - 1 : j;
+            putchar('0' + n - ((a < b) ? a : b));
+        }     
+        putchar ('\n');
+    }
+    return 0;
+}
